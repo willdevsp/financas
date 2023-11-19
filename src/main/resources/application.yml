@@ -1,0 +1,17 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: 123456
+        url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/financas
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+
+
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'
