@@ -21,6 +21,8 @@ public class CadastroDividas {
     @PostMapping
     public ResponseEntity<Divida> salvar(@RequestBody @Valid Divida divida){
 
+        log.info("Cadastrando nova divida :( - {} : {}", divida.getNomeDivida(), divida.getValorDivida());
+
         return ResponseEntity.ok(cadastrarDivida.salvar(divida));
     }
 }
